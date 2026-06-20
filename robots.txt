@@ -1,0 +1,12 @@
+# robots.txt for Disk Benchmark (D-Bench)
+# Hosted at https://diskbenchmark.github.io/
+# Allow all crawlers full access to public content.
+
+User-agent: *
+Allow: /
+Disallow: /files/
+
+# Block nothing else - all pages are public.
+
+# Sitemap location
+Sitemap: https://diskbenchmark.github.io/sitemap.xml

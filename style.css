@@ -1,0 +1,448 @@
+/* ==========================================================================
+   Disk Benchmark (D-Bench) - Classic Stylesheet
+   Maintains the vintage 90s/2000s look while adding:
+   - Responsive layout (mobile-friendly)
+   - Accessibility (focus states, skip link, contrast)
+   - Print styles
+   - Better typography & spacing
+   - Cleaner organisation
+   ========================================================================== */
+
+/* ---- Reset (light, classic-friendly) ---- */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; }
+img { max-width: 100%; height: auto; display: block; }
+a img { border: 0; }
+
+/* ---- Base typography ---- */
+body {
+  background-color: #f3f3f3;
+  color: #000000;
+  font-family: "Times New Roman", Times, "Liberation Serif", serif;
+  font-size: 16px;
+  line-height: 1.5;
+  padding: 8px;
+}
+
+/* Classic page container - keeps the table-like feel but responsive */
+.page {
+  max-width: 1100px;
+  margin: 0 auto;
+  background: #ffffff;
+  border: 1px solid #c8c8c8;
+  padding: 16px 20px 24px;
+}
+
+/* ---- Header (logo + title) ---- */
+.header {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  border-bottom: 1px solid #c8c8c8;
+  padding-bottom: 12px;
+  margin-bottom: 16px;
+}
+.header .logo { flex: 0 0 80px; }
+.header .logo img { width: 80px; height: 80px; }
+.header .titles { flex: 1 1 auto; min-width: 0; }
+.header .title-main {
+  font-family: "Arial", "Helvetica", "Liberation Sans", sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  color: #000000;
+  line-height: 1.2;
+  margin: 0;
+}
+.header .title-sub {
+  font-family: "Times New Roman", Times, serif;
+  font-size: 16px;
+  font-style: italic;
+  color: #0000FF;
+  margin: 4px 0 0 0;
+}
+.header .title-help {
+  font-family: "Arial", "Helvetica", "Liberation Sans", sans-serif;
+  font-size: 22px;
+  font-weight: bold;
+  color: #000000;
+  margin: 0;
+  line-height: 1.2;
+}
+.header .title-help .help-tag {
+  color: #FF0000;
+  font-weight: bold;
+}
+
+/* ---- Section headings ---- */
+h1, h2, h3, h4 {
+  font-family: "Arial", "Helvetica", "Liberation Sans", sans-serif;
+  color: #000000;
+  margin: 16px 0 8px;
+}
+.section-title {
+  font-size: 20px;
+  font-weight: bold;
+  margin: 18px 0 8px;
+}
+.sub-title {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 12px 0 6px;
+}
+
+/* ---- Links (classic blue/red) ---- */
+a:link    { color: #0000FF; }
+a:visited { color: #0000FF; }
+a:hover   { color: #FF0000; }
+a:active  { color: #0000FF; }
+
+/* Visible focus ring for keyboard users (accessibility) */
+a:focus-visible,
+button:focus-visible,
+[tabindex]:focus-visible {
+  outline: 2px solid #0000FF;
+  outline-offset: 2px;
+  background: #FFFFCC;
+}
+
+/* ---- Skip-to-content link (a11y, hidden until focused) ---- */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  background: #0000FF;
+  color: #FFFFCC;
+  padding: 8px 12px;
+  z-index: 1000;
+  font-weight: bold;
+  text-decoration: none;
+}
+.skip-link:focus {
+  left: 8px;
+  top: 8px;
+  color: #FFFFFF;
+}
+
+/* ---- Quick navigation list (homepage) ---- */
+.quick-nav {
+  font-size: 16px;
+  margin: 12px 0 16px;
+  padding-left: 0;
+  list-style: none;
+}
+.quick-nav li { margin: 4px 0; padding-left: 12px; }
+.quick-nav .updated {
+  color: #FF0000;
+  font-size: 13px;
+  font-style: italic;
+  margin-left: 6px;
+}
+
+/* ---- Section divider ---- */
+hr {
+  border: none;
+  border-top: 1px solid #c8c8c8;
+  margin: 18px 0;
+}
+
+/* ---- Classic tables ---- */
+table.classic {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #999999;
+  margin: 10px 0;
+}
+table.classic th,
+table.classic td {
+  border: 1px solid #999999;
+  padding: 6px 8px;
+  vertical-align: top;
+  text-align: left;
+}
+table.classic th {
+  background-color: #FFFFCC;
+  font-family: "Arial", "Helvetica", "Liberation Sans", sans-serif;
+  font-weight: bold;
+}
+/* Alternating row tint (preserves the old #CCCCCC look) */
+table.classic tr:nth-child(even) td { background-color: #ECECEC; }
+table.classic tr:nth-child(odd)  td { background-color: #FFFFFF; }
+
+/* Banner row inside download tables */
+table.classic .banner td {
+  background-color: #FFFFCC !important;
+  font-family: "Arial", "Helvetica", "Liberation Sans", sans-serif;
+  font-weight: bold;
+  text-align: center;
+}
+
+/* ---- Download table specific ---- */
+.dl-table .theme-name {
+  text-align: center;
+  font-weight: bold;
+  font-family: "Arial", "Helvetica", "Liberation Sans", sans-serif;
+  width: 23%;
+}
+.dl-table .theme-shot { width: 37%; text-align: center; }
+.dl-table .theme-shot img {
+  width: 100%;
+  max-width: 220px;
+  margin: 0 auto;
+  border: 1px solid #999999;
+}
+.dl-table .theme-dl   { width: 40%; text-align: center; }
+.dl-table .theme-dl a {
+  display: inline-block;
+  margin: 4px 0;
+}
+
+/* ---- Screenshot gallery ---- */
+.shots {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
+  margin: 10px 0;
+}
+.shots figure { margin: 0; }
+.shots img {
+  width: 100%;
+  border: 1px solid #999999;
+}
+.shots figcaption {
+  font-size: 13px;
+  font-style: italic;
+  color: #444;
+  text-align: center;
+  margin-top: 4px;
+}
+
+/* ---- Anchors offset so sticky headers don't cover targets ---- */
+:target { scroll-margin-top: 16px; }
+
+/* ---- Inline code-style highlight (used in help) ---- */
+.code-like {
+  font-family: "Courier New", "Liberation Mono", monospace;
+  color: #CC0000;
+  font-weight: bold;
+  background: #FAFAFA;
+  padding: 0 2px;
+}
+pre.code-block {
+  font-family: "Courier New", "Liberation Mono", monospace;
+  color: #CC0000;
+  font-weight: bold;
+  background: #FAFAFA;
+  border: 1px solid #CCCCCC;
+  padding: 10px 12px;
+  white-space: pre;
+  overflow-x: auto;
+}
+
+/* ---- Callout / tip box ---- */
+.callout {
+  border: 1px solid #CCCCCC;
+  background: #FFFFEE;
+  padding: 8px 12px;
+  margin: 10px 0;
+}
+.callout .label {
+  color: #FF0000;
+  font-weight: bold;
+  margin-right: 4px;
+}
+
+/* ---- Table of contents (help page) ---- */
+.toc {
+  background: #FAFAFA;
+  border: 1px solid #CCCCCC;
+  padding: 10px 16px 10px 32px;
+  margin: 10px 0;
+}
+.toc ol { margin: 0; padding-left: 18px; }
+.toc li { margin: 2px 0; }
+
+/* ---- Footer ---- */
+.footer {
+  font-size: 13px;
+  color: #333;
+  text-align: left;
+  border-top: 1px solid #c8c8c8;
+  margin-top: 20px;
+  padding-top: 10px;
+}
+
+/* ---- 404 page ---- */
+.notfound {
+  text-align: center;
+  padding: 30px 10px;
+}
+.notfound .big {
+  font-family: "Arial", "Helvetica", "Liberation Sans", sans-serif;
+  font-size: 26px;
+  font-weight: bold;
+  color: #000000;
+  letter-spacing: 1px;
+}
+.notfound .small {
+  font-size: 14px;
+  color: #555;
+  margin: 8px 0 16px;
+}
+.notfound .back {
+  display: inline-block;
+  padding: 6px 14px;
+  border: 1px solid #0000FF;
+  background: #FFFFCC;
+  text-decoration: none;
+  font-weight: bold;
+}
+.notfound .back:hover { color: #FF0000; border-color: #FF0000; }
+
+/* ---- Back-to-top link (help page, long doc) ---- */
+.back-top {
+  font-size: 13px;
+  text-align: right;
+  margin: 8px 0;
+}
+
+/* ==========================================================================
+   Responsive — keeps the classic look but adapts on small screens
+   ========================================================================== */
+@media (max-width: 760px) {
+  body { font-size: 15px; padding: 4px; }
+  .page { padding: 10px 12px 18px; }
+
+  .header { flex-wrap: wrap; gap: 10px; }
+  .header .logo { flex-basis: 64px; }
+  .header .logo img { width: 64px; height: 64px; }
+  .header .title-main,
+  .header .title-help { font-size: 18px; }
+  .header .title-sub { font-size: 14px; }
+
+  /* Stack the two-column download tables on mobile */
+  .dl-table .theme-name,
+  .dl-table .theme-shot,
+  .dl-table .theme-dl {
+    display: block;
+    width: 100% !important;
+  }
+  .dl-table tr {
+    display: block;
+    margin-bottom: 12px;
+    border: 1px solid #999999;
+  }
+  .dl-table td {
+    display: block;
+    border: none;
+    border-bottom: 1px dashed #CCCCCC;
+    text-align: center !important;
+  }
+  .dl-table .theme-shot img { max-width: 200px; }
+
+  /* Screenshot gallery becomes single column */
+  .shots { grid-template-columns: 1fr; }
+
+  /* Other wide classic tables become horizontally scrollable
+     so we don't destroy their layout, just allow panning */
+  table.classic:not(.dl-table) {
+    display: block;
+    overflow-x: auto;
+    white-space: nowrap;
+  }
+  table.classic:not(.dl-table) th,
+  table.classic:not(.dl-table) td {
+    white-space: normal;
+    min-width: 120px;
+  }
+
+  /* Quick nav: tighter */
+  .quick-nav li { padding-left: 6px; }
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+@media print {
+  body { background: #ffffff; padding: 0; font-size: 12pt; }
+  .page { border: none; max-width: 100%; padding: 0; }
+  a { color: #000000; text-decoration: underline; }
+  .skip-link, .back-top { display: none; }
+  table.classic tr:nth-child(even) td { background: transparent; }
+  table.classic th { background: #eee !important; -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  hr { page-break-after: avoid; }
+}
+
+/* ==========================================================================
+   SEO / a11y helper utilities
+   ========================================================================== */
+
+/* Visually hide but keep available to screen readers */
+.visually-hidden {
+  position: absolute !important;
+  width: 1px; height: 1px;
+  padding: 0; margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* ---- Intro paragraph on homepage ---- */
+.intro {
+  font-size: 16px;
+  background: #FAFAFA;
+  border-left: 3px solid #0000FF;
+  padding: 10px 14px;
+  margin: 10px 0 16px;
+  line-height: 1.55;
+}
+
+/* ---- FAQ accordion (classic look using <details>) ---- */
+details {
+  border: 1px solid #CCCCCC;
+  background: #FFFFFF;
+  margin: 6px 0;
+  padding: 0;
+}
+details > summary {
+  cursor: pointer;
+  padding: 8px 12px;
+  background: #FFFFCC;
+  font-family: "Arial", "Helvetica", "Liberation Sans", sans-serif;
+  list-style: square inside;
+  user-select: none;
+}
+details > summary::-webkit-details-marker { color: #0000FF; }
+details[open] > summary {
+  border-bottom: 1px solid #CCCCCC;
+}
+details > summary:hover { color: #FF0000; }
+details > p {
+  margin: 0;
+  padding: 10px 14px;
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+/* ---- Footer navigation ---- */
+.footer-nav {
+  font-size: 13px;
+  margin-bottom: 6px;
+}
+.footer-nav a {
+  margin: 0 4px;
+}
+
+/* ---- About section spacing ---- */
+#about p { line-height: 1.6; }
+#about h3 { margin-top: 16px; }
+
+/* ---- Inline code (small inline <code>) ---- */
+:not(pre) > code {
+  font-family: "Courier New", "Liberation Mono", monospace;
+  background: #FAFAFA;
+  border: 1px solid #E0E0E0;
+  padding: 0 4px;
+  font-size: 0.92em;
+  color: #CC0000;
+}

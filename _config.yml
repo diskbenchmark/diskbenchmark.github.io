@@ -1,0 +1,19 @@
+# GitHub Pages config for Disk Benchmark website.
+# Keep it simple: serve static files, no Jekyll plugins, no further processing.
+
+# Use the default (no theme) - we ship our own classic stylesheet.
+theme: null
+
+# Disable Jekyll processing of underscore-prefixed files/folders
+# (already enforced by .nojekyll, but kept for clarity)
+include:
+  - ".nojekyll"
+
+# Don't generate any extra pages
+plugins: []
+
+# Default permalink (irrelevant for static HTML, but explicit)
+permalink: pretty
+
+# Excluded items - none, all files in repo are served
+exclude: []

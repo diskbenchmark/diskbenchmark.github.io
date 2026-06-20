@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!-- ===== Primary SEO ===== -->
+<title>Disk Benchmark (D-Bench) - Free Windows SSD / HDD / USB Speed Test</title>
+<meta name="description" content="Free Windows GUI tool to benchmark SSD, HDD, NVMe and USB drives. Measures MB/s, IOPS and latency. Three classic themes. 470 KB download." />
+<meta name="keywords" content="disk benchmark, ssd benchmark, hdd benchmark, nvme benchmark, usb benchmark, storage performance, iops, throughput, disk speed test, d-bench, windows benchmark, free benchmark tool" />
+<meta name="author" content="Ari Sohandri Putra" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1" />
+<meta name="googlebot" content="index, follow" />
+<meta name="theme-color" content="#0000FF" />
+<meta name="application-name" content="Disk Benchmark" />
+<meta name="apple-mobile-web-app-title" content="Disk Benchmark" />
+<meta name="apple-mobile-web-app-capable" content="yes" />
+<meta name="apple-mobile-web-app-status-bar-style" content="default" />
+<meta name="msapplication-TileColor" content="#0000FF" />
+<meta name="msapplication-TileImage" content="mstile-150x150.png" />
+<meta name="generator" content="Disk Benchmark Website" />
+
+<!-- ===== Canonical URL ===== -->
+<link rel="canonical" href="https://diskbenchmark.github.io/" />
+
+<!-- ===== hreflang (English primary, since content is English) ===== -->
+<link rel="alternate" hreflang="en" href="https://diskbenchmark.github.io/" />
+<link rel="alternate" hreflang="x-default" href="https://diskbenchmark.github.io/" />
+
+<!-- ===== Icons ===== -->
+<link rel="icon" type="image/x-icon" href="favicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+<link rel="mask-icon" href="logo.svg" color="#0000FF" />
+<link rel="manifest" href="site.webmanifest" />
+
+<!-- ===== Open Graph (Facebook / LinkedIn / etc.) ===== -->
+<meta property="og:type" content="website" />
+<meta property="og:site_name" content="Disk Benchmark" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:url" content="https://diskbenchmark.github.io/" />
+<meta property="og:title" content="Disk Benchmark (D-Bench) - Free Windows SSD / HDD Speed Test" />
+<meta property="og:description" content="Free Windows GUI disk benchmarking tool with three classic themes. Measure SSD, HDD, NVMe and USB drive performance in MB/s, IOPS and latency." />
+<meta property="og:image" content="https://diskbenchmark.github.io/og-image.png" />
+<meta property="og:image:secure_url" content="https://diskbenchmark.github.io/og-image.png" />
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Disk Benchmark (D-Bench) - Professional Storage Performance Analysis Tool" />
+
+<!-- ===== Twitter Card ===== -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Disk Benchmark (D-Bench) - Free Windows SSD / HDD Speed Test" />
+<meta name="twitter:description" content="Free Windows GUI disk benchmarking tool. Measure SSD, HDD, NVMe and USB drive performance in MB/s, IOPS and latency." />
+<meta name="twitter:image" content="https://diskbenchmark.github.io/og-image.png" />
+<meta name="twitter:image:alt" content="Disk Benchmark (D-Bench) - Professional Storage Performance Analysis Tool" />
+
+<!-- ===== Stylesheet ===== -->
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+<!-- ===== Structured Data: WebSite ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Disk Benchmark (D-Bench)",
+  "alternateName": "D-Bench",
+  "url": "https://diskbenchmark.github.io/",
+  "description": "Professional Storage Performance Analysis Tool for Windows. Measure SSD, HDD, NVMe and USB drive performance.",
+  "inLanguage": "en",
+  "publisher": {
+    "@type": "Person",
+    "name": "Ari Sohandri Putra",
+    "url": "https://github.com/arisohandriputra"
+  },
+  "potentialAction": {
+    "@type": "SearchAction",
+    "target": "https://diskbenchmark.github.io/help.html?q={search_term_string}",
+    "query-input": "required name=search_term_string"
+  }
+}
+</script>
+
+<!-- ===== Structured Data: SoftwareApplication ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "name": "Disk Benchmark (D-Bench)",
+  "alternateName": "D-Bench",
+  "operatingSystem": "Windows 8, 8.1, 10, 11, Vista, 7",
+  "applicationCategory": "UtilitiesApplication",
+  "applicationSubCategory": "Benchmarking Software",
+  "description": "Disk Benchmark (D-Bench) is a free Windows GUI tool that measures SSD, HDD, NVMe and USB drive performance in MB/s, IOPS and latency. Provides a streamlined graphical interface on top of the industry-standard disk I/O performance tests.",
+  "url": "https://diskbenchmark.github.io/",
+  "downloadUrl": "https://diskbenchmark.github.io/files/DiskBenchmark-1.0-Default(EN).exe",
+  "softwareVersion": "1.0",
+  "fileSize": "470 KB",
+  "fileFormat": "application/x-msdownload",
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD"
+  },
+  "featureList": [
+    "Sequential read/write tests",
+    "Random 4K read/write tests",
+    "Mixed I/O tests (e.g. 70R/30W)",
+    "Configurable block size, queue depth, threads, duration, warm-up, cool-down",
+    "Profile presets for HDD, SSD, Flash Drive, Custom",
+    "Export results to TXT and HTML reports",
+    "Three classic themes: Default, Blue, Red"
+  ],
+  "screenshot": [
+    "https://diskbenchmark.github.io/view1.PNG",
+    "https://diskbenchmark.github.io/view2.PNG"
+  ],
+  "author": {
+    "@type": "Person",
+    "name": "Ari Sohandri Putra",
+    "url": "https://github.com/arisohandriputra"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Ari Sohandri Putra",
+    "url": "https://github.com/arisohandriputra"
+  },
+  "license": "https://github.com/arisohandriputra",
+  "inLanguage": "en",
+  "datePublished": "2026-01-01",
+  "dateModified": "2026-06-20",
+  "aggregateRating": {
+    "@type": "AggregateRating",
+    "ratingValue": "5",
+    "ratingCount": "1",
+    "bestRating": "5",
+    "worstRating": "1"
+  }
+}
+</script>
+
+<!-- ===== Structured Data: BreadcrumbList ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://diskbenchmark.github.io/"
+    }
+  ]
+}
+</script>
+
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<div class="page">
+
+  <!-- ===== Header ===== -->
+  <header class="header">
+    <div class="logo">
+      <a href="index.html"><img src="logo.png" alt="Disk Benchmark logo" width="80" height="80" /></a>
+    </div>
+    <div class="titles">
+      <h1 class="title-main">Disk Benchmark (D-Bench)</h1>
+      <p class="title-sub">Professional Storage Performance Analysis Tool</p>
+    </div>
+  </header>
+
+  <!-- ===== Main content ===== -->
+  <main id="main">
+
+    <h2 class="section-title">Download Disk Benchmark 1.0</h2>
+
+    <p class="intro">
+      <strong>Disk Benchmark (D-Bench)</strong> is a free Windows utility for measuring
+      the read/write performance of SSDs, HDDs, NVMe drives and USB storage.
+      It reports throughput in MB/s, IOPS and latency, with three classic themes
+      (Default, Blue, Red) and presets for HDD, SSD and Flash Drive workloads.
+    </p>
+
+    <ul class="quick-nav">
+      <li>&gt; <a href="#dlnew"><strong>Download for Windows 8 / 8.1 / 10 / 11</strong></a><span class="updated">*Updated</span></li>
+      <li>&gt; <a href="#dlold"><strong>Download for Windows Vista / 7</strong></a><span class="updated">*Updated</span></li>
+      <li>&gt; <a href="help.html"><strong>See Documentation</strong></a></li>
+      <li>&gt; <a href="https://github.com/sponsors/arisohandriputra" target="_blank" rel="noopener"><strong>Support / Donate</strong></a></li>
+    </ul>
+
+    <h2 class="section-title">Screenshot:</h2>
+    <div class="shots">
+      <figure>
+        <img src="view1.PNG" alt="Disk Benchmark main window showing the drive dropdown, results table with MB/s, IOPS and latency columns, and the log output panel" width="640" height="384" loading="lazy" />
+        <figcaption>Main window with results table</figcaption>
+      </figure>
+      <figure>
+        <img src="view2.PNG" alt="Disk Benchmark settings window showing profile presets, block size, queue depth, threads, pattern and test list management buttons" width="640" height="384" loading="lazy" />
+        <figcaption>Settings window</figcaption>
+      </figure>
+    </div>
+
+    <hr />
+
+    <!-- ===== Newer Windows downloads ===== -->
+    <section id="dlnew">
+      <h2 class="section-title">Download Link</h2>
+      <table class="classic dl-table" cellpadding="3" cellspacing="3">
+        <caption class="visually-hidden">Disk Benchmark downloads for Windows 8, 8.1, 10 and 11</caption>
+        <tr class="banner">
+          <td colspan="3">for <strong>Windows 8 / 8.1 / 10 / 11</strong></td>
+        </tr>
+        <tr>
+          <td class="theme-name">Default Themes</td>
+          <td class="theme-shot"><img src="viewdefault.PNG" alt="Default theme preview" width="220" height="166" loading="lazy" /></td>
+          <td class="theme-dl">
+            <a href="files/DiskBenchmark-1.0-Default(EN).exe" download><strong>Download</strong> (470 KB)</a><br />
+            <a href="help.html">See Documentation</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="theme-name">Blue Themes</td>
+          <td class="theme-shot"><img src="viewblue.PNG" alt="Blue theme preview" width="220" height="166" loading="lazy" /></td>
+          <td class="theme-dl">
+            <a href="files/DiskBenchmark-1.0-Blue(EN).exe" download><strong>Download</strong> (470 KB)</a><br />
+            <a href="help.html">See Documentation</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="theme-name">Red Themes</td>
+          <td class="theme-shot"><img src="viewred.PNG" alt="Red theme preview" width="220" height="166" loading="lazy" /></td>
+          <td class="theme-dl">
+            <a href="files/DiskBenchmark-1.0-Red(EN).exe" download><strong>Download</strong> (470 KB)</a><br />
+            <a href="help.html">See Documentation</a>
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <hr />
+
+    <!-- ===== Vista / 7 downloads ===== -->
+    <section id="dlold">
+      <h2 class="section-title">Download for Windows Vista / 7</h2>
+      <table class="classic dl-table" cellpadding="3" cellspacing="3">
+        <caption class="visually-hidden">Disk Benchmark downloads for Windows Vista and 7</caption>
+        <tr class="banner">
+          <td colspan="3">for <strong>Windows Vista / 7</strong></td>
+        </tr>
+        <tr>
+          <td class="theme-name">Default Themes</td>
+          <td class="theme-shot"><img src="viewdefault.PNG" alt="Default theme preview for Vista/7" width="220" height="166" loading="lazy" /></td>
+          <td class="theme-dl">
+            <a href="files/wvista7/DiskBenchmark-1.0-Vista7-Default(EN).exe" download><strong>Download</strong> (470 KB)</a><br />
+            <a href="help.html">See Documentation</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="theme-name">Blue Themes</td>
+          <td class="theme-shot"><img src="viewblue.PNG" alt="Blue theme preview for Vista/7" width="220" height="166" loading="lazy" /></td>
+          <td class="theme-dl">
+            <a href="files/wvista7/DiskBenchmark-1.0-Vista7-Blue(EN).exe" download><strong>Download</strong> (470 KB)</a><br />
+            <a href="help.html">See Documentation</a>
+          </td>
+        </tr>
+        <tr>
+          <td class="theme-name">Red Themes</td>
+          <td class="theme-shot"><img src="viewred.PNG" alt="Red theme preview for Vista/7" width="220" height="166" loading="lazy" /></td>
+          <td class="theme-dl">
+            <a href="files/wvista7/DiskBenchmark-1.0-Vista7-Red(EN).exe" download><strong>Download</strong> (470 KB)</a><br />
+            <a href="help.html">See Documentation</a>
+          </td>
+        </tr>
+      </table>
+    </section>
+
+    <hr />
+
+    <!-- ===== SEO-friendly FAQ / keywords section (also feeds rich results) ===== -->
+    <section id="about">
+      <h2 class="section-title">About Disk Benchmark</h2>
+      <p>
+        D-Bench is a graphical front-end for measuring storage performance on Windows.
+        It runs sequential and random I/O workloads at configurable block sizes,
+        queue depths and thread counts, then reports throughput (MB/s), IOPS, and
+        average latency for each test. Results can be exported as plain TXT or as a
+        styled HTML report for sharing.
+      </p>
+
+      <h3 class="sub-title">Frequently Asked Questions</h3>
+
+      <details>
+        <summary><strong>What is Disk Benchmark (D-Bench)?</strong></summary>
+        <p>
+          Disk Benchmark (D-Bench) is a free Windows utility that measures how fast
+          your storage device (SSD, HDD, NVMe or USB) can read and write data.
+          It produces accurate, repeatable results in MB/s, IOPS and milliseconds.
+        </p>
+      </details>
+
+      <details>
+        <summary><strong>Which Windows versions are supported?</strong></summary>
+        <p>
+          Two builds are provided: one for Windows 8, 8.1, 10 and 11, and another
+          for Windows Vista and 7. Both builds come in Default, Blue and Red themes.
+        </p>
+      </details>
+
+      <details>
+        <summary><strong>Is Disk Benchmark free?</strong></summary>
+        <p>
+          Yes. D-Bench is free to download and use. The download size is about 470 KB.
+          If you find the tool useful, you can support the author via the
+          <a href="https://github.com/sponsors/arisohandriputra" target="_blank" rel="noopener">GitHub Sponsors</a> page.
+        </p>
+      </details>
+
+      <details>
+        <summary><strong>What metrics does D-Bench report?</strong></summary>
+        <p>
+          For each test it reports total throughput (MB/s), IOPS (input/output
+          operations per second), average latency (ms), and separate read and write
+          throughput (R MB/s, W MB/s). See the
+          <a href="help.html#three">Understanding the Results</a> section of the
+          documentation for full details.
+        </p>
+      </details>
+
+      <details>
+        <summary><strong>How do I export benchmark results?</strong></summary>
+        <p>
+          Click <strong>Save TXT</strong> for a plain-text report, or <strong>Save HTML</strong>
+          for a styled, self-contained HTML report. Keyboard shortcuts:
+          <code>CTRL+S</code> for TXT, <code>CTRL+SHIFT+S</code> for HTML.
+        </p>
+      </details>
+
+      <!-- JSON-LD FAQ structured data for rich results -->
+      <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+          {
+            "@type": "Question",
+            "name": "What is Disk Benchmark (D-Bench)?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Disk Benchmark (D-Bench) is a free Windows utility that measures how fast your storage device (SSD, HDD, NVMe or USB) can read and write data. It produces accurate, repeatable results in MB/s, IOPS and milliseconds."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Which Windows versions are supported?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Two builds are provided: one for Windows 8, 8.1, 10 and 11, and another for Windows Vista and 7. Both builds come in Default, Blue and Red themes."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "Is Disk Benchmark free?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Yes. D-Bench is free to download and use. The download size is about 470 KB. If you find the tool useful, you can support the author via the GitHub Sponsors page."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "What metrics does D-Bench report?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "For each test it reports total throughput (MB/s), IOPS (input/output operations per second), average latency (ms), and separate read and write throughput (R MB/s, W MB/s)."
+            }
+          },
+          {
+            "@type": "Question",
+            "name": "How do I export benchmark results?",
+            "acceptedAnswer": {
+              "@type": "Answer",
+              "text": "Click Save TXT for a plain-text report, or Save HTML for a styled, self-contained HTML report. Keyboard shortcuts: CTRL+S for TXT, CTRL+SHIFT+S for HTML."
+            }
+          }
+        ]
+      }
+      </script>
+    </section>
+
+    <hr />
+
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <nav class="footer-nav" aria-label="Footer navigation">
+      <a href="index.html">Home</a> |
+      <a href="help.html">Documentation</a> |
+      <a href="#dlnew">Download</a> |
+      <a href="https://github.com/sponsors/arisohandriputra" target="_blank" rel="noopener">Support</a>
+    </nav>
+    <p>&copy; 2026 <a href="https://github.com/arisohandriputra" target="_blank" rel="noopener">Ari Sohandri Putra</a>. All Rights Reserved.</p>
+  </footer>
+
+</div>
+</body>
+</html>

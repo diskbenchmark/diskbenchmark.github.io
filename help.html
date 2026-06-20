@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<!-- ===== Primary SEO ===== -->
+<title>Disk Benchmark Documentation - Help &amp; User Guide | D-Bench</title>
+<meta name="description" content="Complete D-Bench user guide: main window, running benchmarks, results (MB/s, IOPS, latency), settings, exporting reports, keyboard shortcuts and best practices." />
+<meta name="keywords" content="disk benchmark help, d-bench documentation, how to benchmark ssd, how to benchmark hdd, iops meaning, disk latency, benchmark settings, profile presets, export benchmark report, keyboard shortcuts" />
+<meta name="author" content="Ari Sohandri Putra" />
+<meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1" />
+<meta name="googlebot" content="index, follow" />
+<meta name="theme-color" content="#0000FF" />
+
+<!-- ===== Canonical ===== -->
+<link rel="canonical" href="https://diskbenchmark.github.io/help.html" />
+<link rel="alternate" hreflang="en" href="https://diskbenchmark.github.io/help.html" />
+<link rel="alternate" hreflang="x-default" href="https://diskbenchmark.github.io/help.html" />
+
+<!-- ===== Icons ===== -->
+<link rel="icon" type="image/x-icon" href="favicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png" />
+<link rel="manifest" href="site.webmanifest" />
+
+<!-- ===== Open Graph ===== -->
+<meta property="og:type" content="article" />
+<meta property="og:site_name" content="Disk Benchmark" />
+<meta property="og:locale" content="en_US" />
+<meta property="og:url" content="https://diskbenchmark.github.io/help.html" />
+<meta property="og:title" content="Disk Benchmark Documentation - Help & User Guide" />
+<meta property="og:description" content="Complete documentation for Disk Benchmark (D-Bench): main window overview, running benchmarks, understanding results (MB/s, IOPS, latency), settings, exporting reports, shortcuts, and best practices." />
+<meta property="og:image" content="https://diskbenchmark.github.io/og-image.png" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta property="og:image:alt" content="Disk Benchmark (D-Bench) - Documentation" />
+<meta property="article:published_time" content="2026-01-01T00:00:00Z" />
+<meta property="article:modified_time" content="2026-06-20T00:00:00Z" />
+<meta property="article:author" content="Ari Sohandri Putra" />
+<meta property="article:section" content="Documentation" />
+
+<!-- ===== Twitter Card ===== -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Disk Benchmark Documentation - Help & User Guide" />
+<meta name="twitter:description" content="Complete documentation for Disk Benchmark (D-Bench): main window, running benchmarks, results, settings, reports, shortcuts, best practices." />
+<meta name="twitter:image" content="https://diskbenchmark.github.io/og-image.png" />
+
+<link rel="stylesheet" type="text/css" href="style.css" />
+
+<!-- ===== Structured Data: TechArticle ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "TechArticle",
+  "headline": "Disk Benchmark (D-Bench) - Documentation & User Guide",
+  "alternativeHeadline": "Complete user manual for the Disk Benchmark tool",
+  "description": "Complete documentation for Disk Benchmark (D-Bench): main window overview, running benchmarks, understanding results (MB/s, IOPS, latency), settings window, exporting reports, keyboard shortcuts, and benchmarking best practices.",
+  "inLanguage": "en",
+  "datePublished": "2026-01-01T00:00:00Z",
+  "dateModified": "2026-06-20T00:00:00Z",
+  "image": "https://diskbenchmark.github.io/og-image.png",
+  "url": "https://diskbenchmark.github.io/help.html",
+  "mainEntityOfPage": {
+    "@type": "WebPage",
+    "@id": "https://diskbenchmark.github.io/help.html"
+  },
+  "author": {
+    "@type": "Person",
+    "name": "Ari Sohandri Putra",
+    "url": "https://github.com/arisohandriputra"
+  },
+  "publisher": {
+    "@type": "Person",
+    "name": "Ari Sohandri Putra",
+    "url": "https://github.com/arisohandriputra"
+  },
+  "about": {
+    "@type": "SoftwareApplication",
+    "name": "Disk Benchmark (D-Bench)",
+    "operatingSystem": "Windows",
+    "applicationCategory": "UtilitiesApplication"
+  },
+  "proficiencyLevel": "Beginner"
+}
+</script>
+
+<!-- ===== Structured Data: BreadcrumbList ===== -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {
+      "@type": "ListItem",
+      "position": 1,
+      "name": "Home",
+      "item": "https://diskbenchmark.github.io/"
+    },
+    {
+      "@type": "ListItem",
+      "position": 2,
+      "name": "Documentation",
+      "item": "https://diskbenchmark.github.io/help.html"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a href="#main" class="skip-link">Skip to main content</a>
+
+<div class="page">
+
+  <!-- ===== Header ===== -->
+  <header class="header">
+    <div class="logo">
+      <a href="index.html"><img src="logo.png" alt="Disk Benchmark logo" width="80" height="80" /></a>
+    </div>
+    <div class="titles">
+      <h1 class="title-help">Disk Benchmark (D-Bench) <span class="help-tag">- HELP</span></h1>
+      <p class="title-sub">Professional Storage Performance Analysis Tool</p>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <p>&lt;&lt; <a href="index.html">Back to Homepage</a></p>
+
+    <p>
+      <a href="index.html"><strong>Disk Benchmark</strong></a> provides a streamlined graphical interface
+      on top of the industry-standard. It allows you to configure, run, and export disk I/O performance
+      tests without ever touching a command prompt. Whether you are evaluating a new SSD, diagnosing a
+      sluggish hard drive, or comparing storage devices for a report, this tool gives you accurate,
+      repeatable results presented in clean, shareable reports.
+    </p>
+
+    <h2 class="section-title">Table of Contents</h2>
+    <nav class="toc">
+      <ol>
+        <li><a href="#one">Main Window Overview</a></li>
+        <li><a href="#two">Running a Benchmark</a></li>
+        <li><a href="#three">Understanding the Results</a></li>
+        <li><a href="#four">Settings Window</a></li>
+        <li><a href="#five">Exporting Reports</a></li>
+        <li><a href="#six">Keyboard Shortcut Keys</a></li>
+        <li><a href="#seven">Benchmarking Best Practices</a></li>
+      </ol>
+    </nav>
+
+    <hr />
+
+    <!-- ===== 1. Main Window Overview ===== -->
+    <section id="one">
+      <h2 class="section-title">1. Main Window Overview</h2>
+      <p>When you launch the program, you will see the main window with four distinct areas.</p>
+
+      <h3 class="sub-title">1.1 Top Bar =&gt; Drive Selection</h3>
+      <table class="classic">
+        <tr>
+          <th style="width:130px">Element</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><strong>Drive dropdown</strong></td>
+          <td>Lists all ready drives on your system. Each entry shows the drive letter, volume label, free space, and total capacity (e.g., <span class="code-like">C:\  [System]  120.5 GB free / 476.9 GB</span>). Select the drive you want to benchmark.</td>
+        </tr>
+        <tr>
+          <td><strong>Save TXT</strong></td>
+          <td>Exports the benchmark results to a plain text file. A file dialog will appear so you can choose the save location.</td>
+        </tr>
+        <tr>
+          <td><strong>Save HTML</strong></td>
+          <td>Exports the benchmark results to a styled HTML file that can be opened in any web browser.</td>
+        </tr>
+        <tr>
+          <td><strong>Refresh</strong></td>
+          <td>Re-scans the system for available drives and updates the dropdown list. Use this if you connect a new drive after launching the program.</td>
+        </tr>
+        <tr>
+          <td><strong>Settings</strong></td>
+          <td>Opens the Settings window where you can configure test profiles, parameters, and file size.</td>
+        </tr>
+      </table>
+
+      <h3 class="sub-title">1.2 Results Table</h3>
+      <p>This is the central area of the window. It displays one row per test with the following columns:</p>
+      <table class="classic">
+        <tr>
+          <th style="width:130px">Column</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><strong>Test</strong></td>
+          <td>The descriptive name of the test (e.g., <span class="code-like">Seq Read 128K Q8T4</span>, <span class="code-like">Rnd Write 4K Q1T1</span>).</td>
+        </tr>
+        <tr>
+          <td><strong>MB/s</strong></td>
+          <td>Total throughput in megabytes per second (combined read + write for mixed tests).</td>
+        </tr>
+        <tr>
+          <td><strong>IOPS</strong></td>
+          <td>Total input/output operations per second.</td>
+        </tr>
+        <tr>
+          <td><strong>Latency (ms)</strong></td>
+          <td>Average latency in milliseconds for the total I/O.</td>
+        </tr>
+        <tr>
+          <td><strong>R MB/s</strong></td>
+          <td>Read throughput in megabytes per second (from the Read IO output section).</td>
+        </tr>
+        <tr>
+          <td><strong>W MB/s</strong></td>
+          <td>Write throughput in megabytes per second (from the Write IO output section).</td>
+        </tr>
+        <tr>
+          <td><strong>Status</strong></td>
+          <td>Current state of the test: <span class="code-like">Waiting</span>, <span class="code-like">Running...</span>, <span class="code-like">Done</span>, <span class="code-like">Stopped</span>, or <span class="code-like">Parse Error</span>.</td>
+        </tr>
+      </table>
+
+      <h3 class="sub-title">1.3 Log Output</h3>
+      <p>The bottom panel shows a real-time, scrollable log of everything that happens during the benchmark. This includes:</p>
+      <ul>
+        <li>Drive information retrieved when the test starts.</li>
+        <li>Parsed results (throughput, IOPS, latency, read/write breakdowns) after each test completes.</li>
+        <li>Cleanup status and benchmark completion summary.</li>
+      </ul>
+
+      <h3 class="sub-title">1.4 Status Bar</h3>
+      <table class="classic">
+        <tr>
+          <th style="width:130px">Element</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><strong>Status label</strong></td>
+          <td>Shows the current action (e.g., &quot;Ready&quot;, &quot;Creating test file (1G)...&quot;, &quot;Running: Seq Read 128K Q8T4 (1/5)&quot;).</td>
+        </tr>
+        <tr>
+          <td><strong>Progress bar</strong></td>
+          <td>Visual progress indicator from 0% to 100%.</td>
+        </tr>
+        <tr>
+          <td><strong>Percentage label</strong></td>
+          <td>Numeric progress display.</td>
+        </tr>
+        <tr>
+          <td><strong>Start button</strong></td>
+          <td>Begins the benchmark with the currently selected drive and test configuration.</td>
+        </tr>
+        <tr>
+          <td><strong>Stop button</strong></td>
+          <td>Immediately stops the running test (and kills the process if necessary).</td>
+        </tr>
+      </table>
+    </section>
+
+    <hr />
+
+    <!-- ===== 2. Running a Benchmark ===== -->
+    <section id="two">
+      <h2 class="section-title">2. Running a Benchmark</h2>
+      <p>Here is exactly what happens when you click <strong>Start</strong>:</p>
+      <ol>
+        <li><strong>Validation</strong> - The program checks that a drive is selected, at least one test is configured.</li>
+        <li><strong>Sequential test execution</strong> - Each test in the configured list runs one after another. For each test:
+          <ul>
+            <li>The row in the results table highlights yellow to indicate it is running.</li>
+            <li>The output is parsed and the results are displayed in the table.</li>
+            <li>The progress bar updates.</li>
+          </ul>
+        </li>
+        <li><strong>Cleanup</strong> - The temporary test file is deleted from the drive.</li>
+        <li><strong>Completion</strong> - A summary is logged, the Start button is re-enabled, and you can now export reports.</li>
+      </ol>
+      <div class="callout">
+        <span class="label">&gt; Important:</span>
+        While the benchmark is running, the <strong>Settings</strong> and <strong>Start</strong> buttons are disabled
+        to prevent configuration changes mid-test. You can click <strong>Stop</strong> at any time to abort.
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- ===== 3. Understanding the Results ===== -->
+    <section id="three">
+      <h2 class="section-title">3. Understanding the Results</h2>
+
+      <h3 class="sub-title">3.1 Metrics Explained</h3>
+      <table class="classic">
+        <tr>
+          <th>Metric</th>
+          <th>What It Measures</th>
+          <th>Why It Matters</th>
+        </tr>
+        <tr>
+          <td><strong>MB/s (Throughput)</strong></td>
+          <td>The total data transfer rate in megabytes per second. This is the most intuitive measure of disk speed - how fast data can be read from or written to the disk.</td>
+          <td>Higher is better. Important for tasks like copying large files, loading games, or transferring media.</td>
+        </tr>
+        <tr>
+          <td><strong>IOPS</strong></td>
+          <td>Input/Output Operations Per Second. The number of individual read or write requests the disk can handle per second.</td>
+          <td>Critical for database servers, virtual machines, and any workload involving many small, random file operations. SSDs typically excel here.</td>
+        </tr>
+        <tr>
+          <td><strong>Latency (ms)</strong></td>
+          <td>The average time (in milliseconds) it takes for the disk to complete a single I/O request from start to finish.</td>
+          <td>Lower is better. High latency causes the system to feel sluggish, especially during random access patterns.</td>
+        </tr>
+        <tr>
+          <td><strong>R MB/s</strong></td>
+          <td>Read throughput specifically, measured independently from write operations.</td>
+          <td>Shows how fast the disk can retrieve data. Important for application loading, boot times, and read-heavy workloads.</td>
+        </tr>
+        <tr>
+          <td><strong>W MB/s</strong></td>
+          <td>Write throughput specifically, measured independently from read operations.</td>
+          <td>Shows how fast the disk can store data. Important for saving files, installing software, and write-heavy workloads.</td>
+        </tr>
+      </table>
+
+      <h3 class="sub-title">3.2 What These Numbers Mean in Practice</h3>
+      <ul>
+        <li><strong>Sequential Read/Write with large block sizes (128K, 256K)</strong> - These tests measure the disk's raw streaming performance. This is what you experience when copying large files or reading/writing large datasets. Modern NVMe SSDs can exceed 3,000 MB/s here, while SATA SSDs typically reach 500-550 MB/s, and HDDs range from 100-200 MB/s.</li>
+        <li><strong>Random Read/Write with small block sizes (4K)</strong> - These tests simulate real-world workloads like web browsing, application loading, and database operations. This is where SSDs dramatically outperform HDDs. A good SATA SSD might achieve 30,000-100,000 IOPS at 4K random, while an HDD typically manages only 100-300 IOPS.</li>
+        <li><strong>Mixed I/O</strong> - Simulates workloads where both reads and writes happen simultaneously (e.g., an operating system drive under normal use). The read/write percentage (e.g., 70R/30W) determines the balance.</li>
+      </ul>
+
+      <h3 class="sub-title">3.3 Test Name Format</h3>
+      <p>Each test in the results table has an auto-generated descriptive name. Here is how to read it:</p>
+      <pre class="code-block">Seq Read 128K Q8T4
+|   |     |    |  +-- T = Threads (4 threads)
+|   |     |    +----- Q = Queue Depth (8 outstanding I/Os)
+|   |     +---------- Block Size (128 KB)
+|   +---------------- Test Type (Read, Write, or Mixed like 70R/30W)
++-------------------- Access Pattern (Seq = Sequential, Rnd = Random)</pre>
+      <p><strong>Examples:</strong></p>
+      <ul>
+        <li><span class="code-like">Rnd Write 4K Q1T1</span> - Random write test, 4 KB blocks, queue depth 1, 1 thread (single-threaded, worst-case random performance).</li>
+        <li><span class="code-like">Seq Read 4K Q32T4</span> - Sequential read test, 4 KB blocks, queue depth 32, 4 threads (high parallelism, typical SSD workload).</li>
+        <li><span class="code-like">Mixed 70R/30W 4K Q32T4</span> - Mixed I/O test with 70% reads and 30% writes, 4 KB blocks, queue depth 32, 4 threads.</li>
+      </ul>
+    </section>
+
+    <hr />
+
+    <!-- ===== 4. Settings Window ===== -->
+    <section id="four">
+      <h2 class="section-title">4. Settings Window</h2>
+      <p>
+        Click the <strong>Settings</strong> button or <strong>CTRL + SPACE</strong> on the main window to open the Settings window.
+        This is where you configure everything about your benchmark: which preset profile to use, how large
+        the test file should be, and the exact parameters for each individual test.
+      </p>
+
+      <h3 class="sub-title">4.1 Profile Presets</h3>
+      <table class="classic">
+        <tr>
+          <th>Profile</th>
+          <th>Designed For</th>
+          <th>Number of Tests</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><strong>HDD</strong></td>
+          <td>Traditional hard disk drives</td>
+          <td>5</td>
+          <td>Tests sequential read/write at 128 KB with moderate parallelism (QD8, T4), plus 4K random read/write and a mixed workload at single-thread, single-queue depth. These parameters reflect the limited ability of HDDs to handle parallel I/O.</td>
+        </tr>
+        <tr>
+          <td><strong>SSD</strong></td>
+          <td>Solid-state drives (SATA and NVMe)</td>
+          <td>9</td>
+          <td>Includes all HDD tests plus additional sequential 4K tests at high queue depth (QD32, T4) and random 4K tests at both high queue depth (QD32, T1) and single queue depth (QD1, T1). These additional tests reveal the parallelism capabilities that distinguish SSDs from HDDs.</td>
+        </tr>
+        <tr>
+          <td><strong>Flash Drive</strong></td>
+          <td>USB flash drives and memory cards</td>
+          <td>5</td>
+          <td>Uses smaller block sizes (64K for sequential), single thread, and single queue depth throughout, with shorter durations (20 seconds). This accounts for the limited controllers and interface bandwidth typical of USB storage.</td>
+        </tr>
+        <tr>
+          <td><strong>Custom</strong></td>
+          <td>User-defined</td>
+          <td>Varies</td>
+          <td>Automatically selected when you add, remove, or modify any test. Your modifications are preserved until you select a different preset.</td>
+        </tr>
+      </table>
+
+      <h3 class="sub-title">4.2 Test Configuration Panel</h3>
+      <table class="classic">
+        <tr>
+          <th>Parameter</th>
+          <th>Options</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><strong>Block Size</strong></td>
+          <td>512, 1K, 2K, 4K, 8K, 16K, 32K, 64K, 128K, 256K, 512K, 1M</td>
+          <td>The size of each individual I/O request in bytes (or kilobytes/megabytes). Smaller blocks (4K) test random access performance; larger blocks (128K-1M) test sequential streaming performance. The 4K size is particularly important because it matches the standard page size of most operating systems and file systems.</td>
+        </tr>
+        <tr>
+          <td><strong>Queue Depth</strong></td>
+          <td>1, 2, 4, 8, 16, 32, 64, 128</td>
+          <td>The number of outstanding I/O requests that can be queued at the same time. A queue depth of 1 means the disk must finish one request before the next one starts. Higher queue depths allow the disk controller and NCQ (Native Command Queuing) to optimize the order of operations. SSDs benefit significantly from higher queue depths; HDDs show diminishing returns beyond QD4-8.</td>
+        </tr>
+        <tr>
+          <td><strong>Thread</strong></td>
+          <td>1, 2, 4, 8, 16</td>
+          <td>The number of simultaneous threads issuing I/O requests. More threads generate more I/O pressure. For NVMe SSDs, using multiple threads with high queue depth is necessary to reach maximum throughput. For HDDs, additional threads generally provide little benefit due to mechanical seek limitations.</td>
+        </tr>
+        <tr>
+          <td><strong>Pattern</strong></td>
+          <td>Sequential, Random</td>
+          <td><strong>Sequential</strong> - Data is read or written in contiguous blocks from start to end, simulating large file operations. <strong>Random</strong> - Data is read or written at random locations across the entire test file, simulating real-world workloads like OS operation, database queries, and web browsing.</td>
+        </tr>
+        <tr>
+          <td><strong>R/W</strong></td>
+          <td>Read, Write, Mixed</td>
+          <td><strong>Read</strong> - Only measures read performance. <strong>Write</strong> - Only measures write performance. <strong>Mixed</strong> - Measures a combination of reads and writes.</td>
+        </tr>
+        <tr>
+          <td><strong>Read % (Mixed)</strong></td>
+          <td>0 &gt; 100 (only enabled when R/W is set to Mixed)</td>
+          <td>The percentage of I/O operations that are reads (the rest are writes). For example, 70 means 70% reads and 30% writes. A typical OS workload might be 65-75% reads.</td>
+        </tr>
+        <tr>
+          <td><strong>Duration</strong></td>
+          <td>5 &gt; 600 seconds</td>
+          <td>How long the actual test runs (excluding warm-up and cool-down). Longer durations produce more stable and representative results, at the cost of increased total test time.</td>
+        </tr>
+        <tr>
+          <td><strong>Warm Up</strong></td>
+          <td>0 &gt; 120 seconds</td>
+          <td>A preparatory period before the actual measurement begins. This allows disk caches to stabilize, firmware background operations to settle, and the system to reach a steady state.</td>
+        </tr>
+        <tr>
+          <td><strong>Cool Down</strong></td>
+          <td>0 &gt; 120 seconds</td>
+          <td>A settling period after the measurement ends. During cool-down, the program continues performing I/O but discards the results. This helps prevent the next test from being affected by the previous test's residual cache state.</td>
+        </tr>
+      </table>
+
+      <h3 class="sub-title">4.3 Test List Management</h3>
+      <ol>
+        <li><strong>Add Test</strong> - Creates a new test using the current configuration panel settings and appends it to the end of the test list. The profile automatically switches to &quot;Custom&quot;.</li>
+        <li><strong>Update Sel.</strong> - Replaces the currently selected test in the list with the current configuration panel settings. You must select a test in the list first.</li>
+        <li><strong>Remove Test</strong> - Deletes the currently selected test from the list.</li>
+        <li><strong>Move Up</strong> - Moves the selected test one position up in the execution order.</li>
+        <li><strong>Move Down</strong> - Moves the selected test one position down in the execution order.</li>
+        <li><strong>Duplicate</strong> - Creates a copy of the selected test and inserts it immediately below the original. Useful when you want to create a similar test with minor parameter changes.</li>
+        <li><strong>Clear All</strong> - Removes all tests from the list. The profile switches to &quot;Custom&quot;.</li>
+        <li><strong>Reset Default</strong> - Clears all custom tests and reloads the default HDD profile.</li>
+      </ol>
+      <div class="callout">
+        <span class="label">&gt; Tip:</span>
+        When you click on a test in the list, its parameters are automatically loaded into the configuration panel above.
+        You can then modify any parameter and click <strong>Update Sel.</strong> to apply the changes.
+      </div>
+    </section>
+
+    <hr />
+
+    <!-- ===== 5. Exporting Reports ===== -->
+    <section id="five">
+      <h2 class="section-title">5. Exporting Reports</h2>
+      <p>
+        After running a benchmark, you can export the results in two formats using the <strong>Save TXT</strong>
+        and <strong>Save HTML</strong> buttons or <strong>CTRL + S</strong> (Save TXT) /
+        <strong>CTRL + SHIFT + S</strong> (Save HTML) on the main window.
+      </p>
+
+      <h3 class="sub-title">5.1 TXT Report</h3>
+      <p>A plain-text report saved with a <span class="code-like">.txt</span> extension. This format is ideal for:</p>
+      <ul>
+        <li>Pasting into emails, forum posts, or chat messages.</li>
+        <li>Archiving in version-controlled systems.</li>
+        <li>Processing with text-based tools or scripts.</li>
+      </ul>
+
+      <h3 class="sub-title">5.2 HTML Report</h3>
+      <p>A professionally styled, self-contained HTML report saved with an <span class="code-like">.html</span> extension. This format is ideal for:</p>
+      <ul>
+        <li>Sharing results in a visually appealing format.</li>
+        <li>Opening in any web browser (no server required).</li>
+        <li>Printing or saving as PDF from the browser.</li>
+        <li>Embedding in documentation or presentations.</li>
+      </ul>
+    </section>
+
+    <hr />
+
+    <!-- ===== 6. Keyboard Shortcut Keys ===== -->
+    <section id="six">
+      <h2 class="section-title">6. Keyboard Shortcut Keys</h2>
+      <table class="classic">
+        <tr>
+          <th>Action</th>
+          <th>Shortcut</th>
+        </tr>
+        <tr><td><strong>Start Test</strong></td>      <td><span class="code-like">CTRL + T</span></td></tr>
+        <tr><td><strong>Stop Test</strong></td>       <td><span class="code-like">CTRL + END</span></td></tr>
+        <tr><td><strong>Open Settings</strong></td>   <td><span class="code-like">CTRL + SPACE</span></td></tr>
+        <tr><td><strong>Save TXT</strong></td>        <td><span class="code-like">CTRL + S</span></td></tr>
+        <tr><td><strong>Save HTML</strong></td>       <td><span class="code-like">CTRL + SHIFT + S</span></td></tr>
+        <tr><td><strong>Show This Help</strong></td>  <td><span class="code-like">F1</span></td></tr>
+      </table>
+    </section>
+
+    <hr />
+
+    <!-- ===== 7. Best Practices ===== -->
+    <section id="seven">
+      <h2 class="section-title">7. Benchmarking Best Practices</h2>
+      <p>To get the most accurate and representative results from your benchmarks:</p>
+      <ul>
+        <li><strong>Close all other applications</strong> before running a benchmark. Background processes (antivirus scans, Windows Update, cloud sync, web browsers) can interfere with disk I/O and produce inconsistent results.</li>
+        <li><strong>Run the benchmark multiple times</strong> and look for consistency. A single run may be affected by transient system activity. Three runs with similar results give you much more confidence in the numbers.</li>
+        <li><strong>Use an appropriate test file size.</strong> For SSDs, use at least 2 GB to exceed the SLC cache. For HDDs, 1 GB is generally sufficient.</li>
+        <li><strong>Let the drive warm up.</strong> If the drive has been idle, the first test may show lower performance due to spin-up time (HDDs) or power management states (SSDs). The built-in warm-up period helps mitigate this.</li>
+        <li><strong>Test on a clean drive.</strong> If the drive is nearly full, performance may degrade, especially on SSDs. Ensure at least 20-30% free space for accurate results.</li>
+        <li><strong>Be aware of OS caching.</strong> This program uses the <span class="code-like">-Sh</span> flag (unbuffered I/O) and <span class="code-like">-Zr</span> (disable OS read caching for write tests) to bypass Windows file caching as much as possible, providing results closer to the actual hardware capability.</li>
+        <li><strong>Consider the interface bottleneck.</strong> A SATA III SSD will never exceed approximately 550 MB/s regardless of how fast the NAND flash is, because that is the theoretical maximum of the SATA III interface. NVMe drives use the PCIe bus and can reach much higher speeds.</li>
+        <li><strong>Note the temperature.</strong> SSDs, especially NVMe drives, can thermal throttle under sustained write workloads. If you notice performance dropping significantly during long tests, the drive may be overheating.</li>
+      </ul>
+    </section>
+
+    <p class="back-top">&gt; <a href="#main">Back to top</a></p>
+    <p>&lt;&lt; <a href="index.html">Back to Homepage</a></p>
+
+  </main>
+
+  <hr />
+
+  <footer class="footer">
+    &copy; 2026 <a href="https://github.com/arisohandriputra" target="_blank" rel="noopener">Ari Sohandri Putra</a>. All Rights Reserved.
+  </footer>
+
+</div>
+</body>
+</html>

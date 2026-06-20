@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+  <!-- Classic disk/storage icon: outer circle + inner hub -->
+  <circle cx="50" cy="50" r="46" fill="#0000FF" stroke="#000080" stroke-width="2"/>
+  <circle cx="50" cy="50" r="22" fill="#FFFFFF" stroke="#000080" stroke-width="2"/>
+  <circle cx="50" cy="50" r="6" fill="#0000FF"/>
+  <!-- Speed lines suggesting performance -->
+  <rect x="6" y="48" width="14" height="2" fill="#FFFFFF"/>
+  <rect x="6" y="52" width="10" height="2" fill="#FFFFFF"/>
+  <rect x="80" y="48" width="14" height="2" fill="#FFFFFF"/>
+  <rect x="84" y="52" width="10" height="2" fill="#FFFFFF"/>
+  <!-- Letter "D" small -->
+  <text x="50" y="55" font-family="Arial, sans-serif" font-size="10" font-weight="bold"
+        text-anchor="middle" fill="#0000FF">DB</text>
+</svg>
