@@ -357,41 +357,7 @@
         the test file should be, and the exact parameters for each individual test.
       </p>
 
-      <h3 class="sub-title">4.1 Profile Presets</h3>
-      <table class="classic">
-        <tr>
-          <th>Profile</th>
-          <th>Designed For</th>
-          <th>Number of Tests</th>
-          <th>Description</th>
-        </tr>
-        <tr>
-          <td><strong>HDD</strong></td>
-          <td>Traditional hard disk drives</td>
-          <td>5</td>
-          <td>Tests sequential read/write at 128 KB with moderate parallelism (QD8, T4), plus 4K random read/write and a mixed workload at single-thread, single-queue depth. These parameters reflect the limited ability of HDDs to handle parallel I/O.</td>
-        </tr>
-        <tr>
-          <td><strong>SSD</strong></td>
-          <td>Solid-state drives (SATA and NVMe)</td>
-          <td>9</td>
-          <td>Includes all HDD tests plus additional sequential 4K tests at high queue depth (QD32, T4) and random 4K tests at both high queue depth (QD32, T1) and single queue depth (QD1, T1). These additional tests reveal the parallelism capabilities that distinguish SSDs from HDDs.</td>
-        </tr>
-        <tr>
-          <td><strong>Flash Drive</strong></td>
-          <td>USB flash drives and memory cards</td>
-          <td>5</td>
-          <td>Uses smaller block sizes (64K for sequential), single thread, and single queue depth throughout, with shorter durations (20 seconds). This accounts for the limited controllers and interface bandwidth typical of USB storage.</td>
-        </tr>
-        <tr>
-          <td><strong>Custom</strong></td>
-          <td>User-defined</td>
-          <td>Varies</td>
-          <td>Automatically selected when you add, remove, or modify any test. Your modifications are preserved until you select a different preset.</td>
-        </tr>
-      </table>
-
-      <h3 class="sub-title">4.2 Test Configuration Panel</h3>
+      <h3 class="sub-title">4.1 Test Configuration Panel</h3>
       <table class="classic">
         <tr>
           <th>Parameter</th>
@@ -445,7 +411,7 @@
         </tr>
       </table>
 
-      <h3 class="sub-title">4.3 Test List Management</h3>
+      <h3 class="sub-title">4.2 Test List Management</h3>
       <ol>
         <li><strong>Add Test</strong> - Creates a new test using the current configuration panel settings and appends it to the end of the test list. The profile automatically switches to &quot;Custom&quot;.</li>
         <li><strong>Update Sel.</strong> - Replaces the currently selected test in the list with the current configuration panel settings. You must select a test in the list first.</li>
